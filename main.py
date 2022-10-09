@@ -35,12 +35,13 @@ def checkSpaces():
             thic = 5
             spaces += 1
 
+
         else:
             color = (0, 0, 200)
             thic = 2
 
         rect=cv2.rectangle(img, (x, y), (x + w, y + h), color, thic)
-        num=str(i)
+        num=str(i+1)
         cv2.putText(rect,num,(pos[0] + (width-10)//2, pos[1] + (height+20)//2), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
         cv2.putText(img, str(cv2.countNonZero(imgCrop)), (x, y + h - 6), cv2.FONT_HERSHEY_PLAIN, 1,
                     color, 2)
